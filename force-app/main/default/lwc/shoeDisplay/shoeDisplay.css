@@ -1,0 +1,12 @@
+.card {
+    padding: 8px;
+    background-color: #ffffff;
+    border-radius: 0.25rem;
+}
+
+img.product {
+    height: 120px;
+    max-width: 160px;
+    pointer-events: none;
+}
+

@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Let us help you find your shoe" icon-name="standard:search">
+        <div class="searchClass">
+        <h1 class="slds-text-heading_small">Select your size</h1>
+        <lightning-slider onchange={handleSizeSliderChange} label="Size" value={size} step=1 min="7" max="12"></lightning-slider>
+
+        <section>
+        <div class="slds-m-vertical_medium">
+            <h1 class="slds-text-heading_small">Set your maximum price</h1>
+        </div>
+        
+        <lightning-slider onchange={handlePriceSliderChange} name="mPrice" label="Price range" value={mPrice} step=20 min="40" max="500"></lightning-slider>
+        </section>
+        <section>
+            <div class="slds-m-vertical_medium">
+                <h1 class="slds-text-heading_small">Type of Shoes</h1>
+            </div>
+    
+            <lightning-checkbox-group onchange={handleCheckboxChange} label="Types" options={Types} value={typeArray}></lightning-checkbox-group>
+        </section>
+        </div>
+    </lightning-card>
+    </template>

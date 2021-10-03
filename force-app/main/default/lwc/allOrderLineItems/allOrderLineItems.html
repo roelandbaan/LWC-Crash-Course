@@ -1,0 +1,7 @@
+<template>
+    <template if:true={orderLineItems}>
+        <template for:each={orderLineItems} for:item="orderLineItem">
+            <p key={orderLineItem.Id}>Shoe - {orderLineItem.Name} | Price - {orderLineItem.Price__c}</p>
+        </template>
+    </template>
+</template>

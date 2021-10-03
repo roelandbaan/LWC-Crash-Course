@@ -1,0 +1,22 @@
+<template>
+       <lightning-card title="Your Shopping Cart" icon-name="standard:webcart"></lightning-card>
+       <template for:each={soqlList} for:item="shoe">
+         <lightning-card key={shoe.Id}>
+         <div class="card" >
+              <img class="product slds-align_absolute-center" src={shoe.Image__c} alt="shoe picture" style="width:100%">
+          </div>   
+             <p class="title slds-align_absolute-center">{shoe.Name}</p>
+             <lightning-formatted-number 
+                                 format-style="currency"
+                                 currency-code="EUR"
+                                 value={shoe.Price__c}
+                                 class="price slds-align_absolute-center"
+                                 maximum-fraction-digits="0"
+                             ></lightning-formatted-number>
+       </lightning-card>
+     </template>
+     <lightning-card>
+     <lightning-button name='order' variant="brand-outline"  label="order now" title="Click to Order now" onclick={createOrder} class="slds-align_absolute-center"></lightning-button>
+
+</lightning-card>
+     </template>
